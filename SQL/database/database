@@ -1,0 +1,11 @@
+CREATE DATABASE Theater
+create table Theater(
+id int(15) NOT NULL AUTO_INCREMENT,
+name_ varchar(255) NOT NULL,
+actors_name varchar(255) NOT NULL,
+date_theater varchar(255) NOT NULL,
+time_theater  varchar(255) NOT NULL,
+all_ticket int(15) NOT NULL,
+purchased_ticket int(15) NOT NULL,
+PRIMARY KEY (id))
+ENGINE = InnoDB DEFAULT CHARSET = UTF8mb4
