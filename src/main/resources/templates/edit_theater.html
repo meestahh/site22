@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+<body>
+<div class="bg-image"
+     style="background-image: url('https://s1.afisha.ru/mediastorage/3f/8c/1c1129f2054d42a4a3948eab8c3f.jpg'); height: 100vh; overflow: auto; background-repeat: no-repeat; background-size: 100%;">
+    <blockquote class="blockquote text-center text-white"><h1>Редактирование сеансов</h1></blockquote>
+    <div class="row">
+        <div class="col-md-8 offset-md-4 text-white">
+            <form action="#" th:action="@{/save}" th:object="${Type}" method="post">
+                <table>
+                    <tr>
+                        <td>Название спектакля:</td>
+                        <td><input type="text" th:field="*{name_}"></td>
+                    </tr>
+                    <tr>
+                        <td>Коллектив актеров:</td>
+                        <td><input type="text" th:field="*{actors_name}"></td>
+                    </tr>
+                    <tr>
+                        <td>Дата спектакля:</td>
+                        <td><input type="date" th:field="*{date_theater}"></td>
+                    </tr>
+                    <tr>
+                        <td>Время спектакля:</td>
+                        <td><input type="time" th:field="*{time_theater}"></td>
+                    </tr>
+                    <tr>
+                        <td>Общее количество билетов:</td>
+                        <td><input type="text" th:field="*{all_ticket}"></td>
+                    </tr>
+                    <tr>
+                        <td>Количество купленых билетов билетов:</td>
+                        <td><input type="text" th:field="*{purchased_ticket}"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <button type="submit" class="btn btn-primary" data-toggle="button" aria-pressed="false" autocomplete="off">Отправить</button>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>
